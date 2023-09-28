@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Archivos</title>
+</head>
+<body>
+    <h1>Archivos en la Carpeta "uploads"</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        // Ruta de la carpeta de archivos
+        const folderPath = 'uploads/';
+
+        // Elemento ul para mostrar la lista de archivos
+        const fileList = document.getElementById('file-list');
+
+        // Realizar una solicitud para obtener la lista de archivos
+        fetch(folderPath)
+            .then(response => response.text())
+            .then(data => {
+                const files = data.split('\n').filter(fileName => fileName.trim() !== '');
+                files.forEach(fileName => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = fileName;
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error al obtener la lista de archivos:', error);
+            });
+    </script>
+</body>
+</html>
