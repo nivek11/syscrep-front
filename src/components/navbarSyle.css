@@ -1,0 +1,76 @@
+/* navbarStyle.css */
+
+/* Establece el estilo para la barra de navegación en general */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255); /* Fondo blanco para la barra de navegación */
+    padding: 5px; /* Espaciado interior para la barra de navegación */
+    position: relative; /* Permite posicionar las líneas */
+  }
+  
+  /* Establece el estilo para la línea superior (amarillo) */
+  .navbar-line-top {
+    position: absolute;
+    top: 25px; /* Despega la línea 5px de la parte superior */
+    left: 0;
+    width: 100%; /* Abarca toda la barra de navegación */
+    height: 10px; /* Altura de la línea superior */
+    background-color: #f8d201; /* Color amarillo para la línea superior */
+    z-index: 0; /* Menor prioridad que el logo */
+  }
+  
+  /* Establece el estilo para el logotipo */
+  img {
+    width: 90px; /* Cambia este valor al tamaño deseado */
+    height: auto; /* Esto mantiene la proporción de aspecto */
+    z-index: 1; /* Mayor prioridad para aparecer por encima */
+    position: relative; /* Necesario para que funcione el z-index */
+  }
+  
+  /* Establece el estilo para la barra de navegación izquierda */
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Establece el estilo para la línea inferior (naranja) */
+  .navbar-line-bottom {
+    position: absolute;
+    bottom: 20px; /* Coloca la línea 80px arriba del fondo para que esté más cerca de la línea amarilla */
+    left: 0;
+    width: 100%; /* Abarca toda la barra de navegación */
+    height: 37px; /* Altura de la línea inferior */
+    background-color: #fe6b07; /* Color naranja para la línea inferior */
+    z-index: 0; /* Menor prioridad que el logo */
+  }
+  
+  /* Actualiza el estilo para #navbar */
+#navbar {
+  list-style-type: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* Posicionamiento absoluto para el texto */
+  bottom: 28px; /* Ajusta este valor para mover el texto arriba o abajo respecto a la línea naranja */
+  left: 100px; /* Alinea el texto a la derecha */
+  z-index: 1;
+}
+
+#navbar a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: aliceblue; /* Establece el color del texto del enlace a aliceblue */
+  font-size: 1.3rem; /* Establece el tamaño de la fuente */
+  font-weight: 600; /* Establece el peso de la fuente */
+}
+
+
+
+  
+
+
+  
+
+  
